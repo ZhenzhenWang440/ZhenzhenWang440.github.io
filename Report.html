@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<textarea name="" id="" cols="145" rows="200" style="font-size: 20px;">
+  一、 项目设计
+
+    开发一个个人网页（包括导航栏设计、左右侧联动布局、个人信息导航菜单、轮播相册、相关人物介绍搜索、视频播放器）
+
+  二、 详细设计
+
+    1. 导航栏设计
+
+<nav>
+    <ul>
+        <li class="local_home">
+            <a href="#page1">
+                <span class="local_hd">Home</span>
+                <span class="local_bd">主页</span>
+            </a>
+        </li>
+        <li class="local_home">
+            <a href="#page2">
+                <span class="local_hd">Preson</span>
+                <span class="local_bd">简介</span>
+            </a>
+        </li>
+        <li class="local_home">
+            <a href="#page3">
+                <span class="local_hd">Photo</span>
+                <span class="local_bd">照片集</span>
+            </a>
+        </li>
+        <li class="local_home">
+            <a href="#page4">
+                <span class="local_hd">Search</span>
+                <span class="local_bd">查询</span>
+            </a>
+        </li>
+        <li class="local_home">
+            <a href="#page5 ">
+                <span class="local_hd">Video</span>
+                <span class="local_bd">视频集</span>
+            </a>
+        </li>
+        <li class="local_home">
+            <a href="Report.html ">
+                <span class="local_hd">Report</span>
+                <span class="local_bd">项目报告</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    这是一个导航栏，列表了5个不同的链接，分别为“主页”、“简介”、“照片集”、“查询”和“视频集”。每个链接使用了两种语言（英文和中文），当用户点击任何一个链接时，它将会滚动到相应的页面。因此，该导航栏的作用是帮助用户浏览网站，方便他们选择所需的特定页面。
+
+    2. 左右侧联动导航布局
+
+ <main>
+    <div class="main_left">
+        <div class="myPhoto current">
+            <a href="#">
+                <img src="./img/iu12.jpg" alt="" />
+                <h3>李知恩</h3>
+                <p>韩国女歌手、演员</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <p></p>
+                <span>首页</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <p></p>
+                <span>关于</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <p></p>
+                <span>作品</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <p></p>
+                <span>更多</span>
+            </a>
+        </div>
+    </div>
+    <div class="main_right">
+        <div class="content hidden" style="display: block">
+            <img src="./img/iu12.jpg" alt="" / class="touxiang">
+            <p>IU（이지은、Lee Ji Eun，1993年5月16日——）</p>
+            <p>李知恩艺名为IU，其中“I”指其自己、“U”则指受众群，意为希望自己和观众永远在一起。</p>
+        </div>
+
+        <div class="content hidden">
+            <img src="./img/iu9.jpg" alt="" / class="touxiang">
+            <p>2008年，以《迷儿》出道。</p>
+            <p>2009年，发行首张正规专辑《Growing Up》；11月，凭借《棉花糖》进一步获大众喜爱。</p>
+            <p>2010年，凭借音乐作品《好日子》获得第25届韩国金唱片大赏数位音源本赏。</p>
+        </div>
+
+        <div class="content hidden">
+            <img src="./img/iu10.jpg" alt="" / class="touxiang">
+            <p>2011年KBS月火剧《Dream high》中饰演的金必淑一角深受大众喜爱。</p>
+            <p>随后又担任了2013年KBS周末剧《最佳李顺心》和2013年KBS水木剧《漂亮男人》女主角。</p>
+            <p>2012年年末，美国著名电影评论网站TC Candler公布了“2012年全球100张最美面孔”，IU排在了第19位。</p>
+        </div>
+
+        <div class="content hidden">
+            <img src="./img/iu16.jpg" alt="" / class="touxiang">
+            <p>《德鲁纳酒店》</p>
+            <p>《我的大叔》</p>
+            <p>《无人之地》......</p>
+        </div>
+
+
+        <div class="content hidden">
+            <img src="./img/iu11.jpg" alt="" / class="touxiang">
+            <div>
+
+                <a href="https://baike.sogou.com/v704049.htm?fromTitle=iu" style="color: #010d10;font-size: large;">点击一下了解更多</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+    利用HTML代码实现了一个网页的布局和内容展示。该网页主要介绍了韩国女歌手、演员李知恩（IU）的个人信息和作品。左侧为导航菜单，右侧则展示了多个部分，包括李知恩的简介、音乐作品、电视剧演出、推荐链接等。用户可以点击不同的导航项，浏览相关信息和内容。
+
+    3. 个人信息导航菜单
+
+           <div class="section sec2" id="section2">
+               <!-- 背景小圆点 -->
+               <div class="sec1_circle1"></div>
+               <div class="sec1_circle2"></div>
+               <div class="sec2_circle1"></div>
+               <div class="sec2_circle2"></div>
+               <div class="sec2_circle3"></div>
+               <!-- 主题内容 -->
+               <div class="sec2_main">
+                   <div class="sec2_main_head">
+                       <ul>
+                           <li class="current1">
+                               <a href="#">个人资料</a>
+                           </li>
+                           <li><a href="#">个人图片</a></li>
+                           <li><a href="#">个人日志</a></li>
+                           <li><a href="#">个人伴侣</a></li>
+                           <li><a href="#">个人收藏</a></li>
+                       </ul>
+                   </div>
+                   <div class="sec2_main_body">
+                       <div class="sec2_main_body_content hidden" style="display: block">
+                           <div class="sec2_main_body_content_left">
+
+                               <p>姓名：李知恩</p>
+                               <p>性别：女</p>
+                               <p>生日：1993/5/16</p>
+                               <p>特长：演戏，唱歌，主持</p>
+                               <p>星座：金牛座</p>
+
+                            </div>
+                            <div class="sec2_main_body_content_right">
+                                <img src="./img/iu16.jpg" alt="" />
+                            </div>
+    ​                    </div>
+                        <div class="sec2_main_body_content hidden">
+                            <div class="sec2_main_body_content_left">
+                                <p>💘</p>
+                                <p>写真</p>
+                                <p>💓</p>
+                            </div>
+                            <div class="sec2_main_body_content_right">
+                                <img src="./img/iu17.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="sec2_main_body_content hidden">
+                            <div class="sec2_main_body_content_left">
+                                <p>会作词</p>
+                                <p>会写曲</p>
+                                <p>会唱歌</p>
+                                <p>会演戏</p>
+                            </div>
+                            <div class="sec2_main_body_content_right">
+                                <img src="./img/iu10.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="sec2_main_body_content hidden">
+                            <div class="sec2_main_body_content_left">
+                                <p>💘</p>
+                                <p>李钟硕</p>
+                                <p>韩国演员</p>
+                                <p>💓</p>
+                            </div>
+                            <div class="sec2_main_body_content_right">
+                                <img src="./img/li1.jpg" alt="" />
+                            </div>
+                        </div>
+    
+                        <div class="sec2_main_body_content hidden">
+                            <div class="sec2_main_body_content_left">
+                                <p>💘</p>
+                                <p>爱意随风起，自然知秋意。</p>
+                                <p>💓</p>
+                            </div>
+                            <div class="sec2_main_body_content_right">
+                                <img src="./img/1-1.jpg" alt="" />
+                            </div>
+                        </div>
+    ​                </div>
+    ​            </div>
+    ​        </div>
+
+    该网页的第二屏主要展示了关于李知恩（IU）的个人资料、图片、日志、伴侣以及收藏等相关信息。页面上方是导航菜单，在导航菜单中用户可以点击不同的项目，浏览相关内容。页面主体部分则包括五个部分，每个部分展示不同的内容。图片和文字相结合，使得页面更加生动有趣。同时，该网页也增加了背景小圆点的设计，进行了美化。
+
+    4. 轮播相册
+
+   ​        <div class="section sec3" id="section3">
+   ​            <div class="slide">
+   ​                <img src="./img/iu4.jpg" alt="" />
+   ​            </div>
+   ​            <div class="slide">
+   ​                <img src="./img/iu5.jpg" alt="" />
+   ​            </div>
+   ​            <div class="slide">
+   ​                <img src="./img/iu6.jpg" alt="" />
+   ​            </div>
+   ​            <div class="slide">
+   ​                <img src="./img/iu7.jpg" alt="" />
+   ​            </div>
+   ​            <div class="slide">
+   ​                <img src="./img/iu8.jpg" alt="" />
+   ​            </div>
+   ​        </div>
+
+   该网页的第三屏采用了图片轮播的设计，展示了五张韩国女歌手、演员李知恩（IU）的不同照片。当用户进入到该屏时，网页会自动进行轮播展示，让用户可以观看到不同的照片。同时，用户也可以通过手动点击左右箭头来切换图片，或者点击下方的小圆点，切换到对应的图片。利用这种方式，从而为用户带来更加丰富的视觉体验。
+
+    5. 相关人物介绍
+
+        <div class="section sec4" id="section4">
+            <!-- 背景小圆点 -->
+            <div class="sec4_circle1"></div>
+            <div class="sec4_circle2"></div>
+            <div class="sec4_circle3"></div>
+            <!-- 主题内容 -->
+            <div class="sec4_main_box">
+                <!-- 相关人物板块 -->
+                <div id="sec4-app">
+                    <div class="sec4_title">
+                        <h2>相关人物搜索</h2>
+                    </div>
+                    <div class="sec4_search">
+                        <input type="text" name="" id="" placeholder="李知恩" @keyup.enter="searchEnter" v-model="city"
+                            class="sec4_input" />
+                        <button @click="clickButton" class="sec4_button" onClick="location.href='https://movie.douban.com/celebrity/1312852/'" >搜索</button>
+                    </div>
+                    <div class="sec4_select">
+                        <a href="https://baike.baidu.com/item/%E6%9D%8E%E9%92%9F%E7%A1%95/10241759?fr=aladdin" target="_blank">李钟硕</a>
+                        <a href="https://www.sogou.com/web?ie=utf8&query=%E6%9C%B4%E5%BD%A9%E8%8B%B1&s_from=kmap" target="_blank">朴彩英</a>
+                        <a href="https://baike.sogou.com/v6428639.htm?fromTitle=%E5%B4%94%E9%9B%AA%E8%8E%89" target="_blank">崔雪莉</a>
+                        <a href="https://www.sogou.com/web?ie=utf8&query=%E8%A3%B4%E7%8F%A0%E6%B3%AB&s_from=kmap" target="_blank">裴珠泫</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    这段代码实现了一个网页第四屏的布局和功能，包括一个相关人物搜索框、相关人物链接等。可以通过点击搜索按钮进行搜索并跳转到豆瓣相关页面，同时还提供了一些其他人物的链接。
+
+    6. 视频播放器
+
+<div class="section sec5" id="section5">
+    <video src="music/zwi.mp4" autoplay muted loop controls>
+    </video>
+</div>
+
+    这段代码实现了在网页的第五屏展示一个视频，并设置了一些属性，包括自动播放、静音、循环和控制条。这个视频的地址是`music/zwi.mp4`。
+
+  三、 开发过程
+
+    在开发过程中，首先需要对代码进行理解，了解每一个标签和类的作用，然后可以使用一些工具和框架来加快开发速度，并改善用户交互体验。
+
+    在本项目中，使用HTML、CSS和Javascript来创建多个屏幕，每个屏幕有独特的信息和元素。整个页面是通过id为"dowebok"的div容器来包含的。
+    每个屏幕都有一个类名为“section”，并通过不同的id值进行区分。 
+    Header中的导航栏链接到其他屏幕，并且在鼠标滚动时实现了平滑的过渡效果。 网页还包括图片、视频、搜索框等元素。
+    这里使用了Vue.js来实现相关人物搜索功能，并使用了Swiper.js来实现图片轮播效果。
+    其中，第四屏中有一个相关人物搜索模块，可以实现输入关键字后，自动搜索人物并展示搜索结果。
+
+    在完成代码编写后，可以通过浏览器打开该网页进行预览和交互测试，确保其正常运行。
+
+  四、 遇到的问题
+
+    在开发过程中，可能会遇到不少问题，例如样式不兼容、功能不完善等。在本项目中，主要遇到了以下问题：
+
+    - 图片不居中问题：部分图片在屏幕上无法居中显示。
+    - Vue.js版本冲突：在使用Vue.js时，与其他插件或库的版本存在冲突，导致某些功能无法正常工作。
+    - 导航栏的设计问题：在设计导航栏时，需要考虑用户使用习惯和网站的定位，以及导航栏的美观性。导航栏超过一定数量后变得不易操作，导航栏纵向或横向排版时占用页面空间过多。
+    - 左右联动布局的设计问题：在使用左右联动布局时，需要考虑内容之间的关系和页面的流畅性。内容之间的关联不大，页面滑动过于缓慢。
+    - 个人信息导航布局的设计问题：在设计个人信息导航布局时，界面过于繁琐或是没有突出重点，内容内容过于冗杂。
+    - 轮播相册布局的设计问题：在设计轮播相册布局时，页面响应速度过慢，图片大小不一，导致界面效果不佳。
+    - 视频播放器的设计问题：在设计视频播放器时，视频格式不受支持。
+  五、 如何解决
+
+    为了解决这些问题，采取了以下措施：
+
+    - 应用flexbox进行排版: 在CSS中使用Flexbox布局模块可以更好地应对各种屏幕尺寸和设备类型，确保图片可以居中显示。
+    - 统一使用最新版本的框架：在使用多个框架时，可以确保它们的版本是相同的，以避免发生不必要的冲突。
+    - 使用适当的HTML和CSS代码来控制导航栏中的元素以及它们的样式。使用下拉菜单或子菜单的方式来减少导航栏的数量。在横向或纵向排版时，需要避免过分占用页面空间。
+    - 使用适当的HTML和CSS代码来控制内容元素和布局。将相关内容放在相邻位置，使用JS或CSS实现页面滑动的动画效果，优化用户体验。
+    - 对于个人信息导航布局的内容进行合理的分组和分类，并根据重要性设置不同的字体和样式。使用合适的图片或图标来突出重点，同时避免信息过于冗杂。
+    - 使用合适的图片格式和大小来优化页面响应速度。在图片尺寸不一的情况下，可以使用合适的JS插件达到图片自适应的效果。同时，使用适当的CSS代码来调整轮播相册的排版样式，以提高用户体验。
+    - 使用特定的mp4格式视频。
+
+  六、 项目总结
+
+    这是一个通过DIV实现的网页项目。整个页面分为五个部分，主要介绍韩国女歌手和演员李知恩的相关信息。
+
+    第一屏是主页，其中包括导航栏和内容区域。导航栏可以让用户轻松切换到其他页面；内容区域呈现了李知恩的照片以及简单介绍。
+
+    第二屏展示了李知恩的个人资料、图片、日志等信息，用户可以通过选择不同的选项来浏览不同的内容。
+
+    第三屏由多张图片组成幻灯片，呈现李知恩的艺术照和生活照。
+
+    第四屏是相关人物搜索页面，用户可以在点击搜索框中输入李知恩的名字并点击“搜索”按钮进行搜索，同时也提供了一些相关搜索关键词以供参考。
+
+    第五屏是视频集，用户可以欣赏一个指定视频。
+
+    整个项目以李知恩为主题，精美的设计和丰富的内容吸引着用户。通过这个项目，用户可以更深入了解李知恩，并探索她的音乐和戏剧作品。
+
+    本项目基本还原了一个完整的网站页面，通过运用HTML、CSS和JavaScript等技术，实现了动态效果、功能性操作等优化。
+    同时还运用了Vue.js和Swiper.js等框架进行升级和改进，以提高网站整体的用户交互体验。
+    在本项目中，我们不仅学习了如何运用前端技术开发一个网站，而且也了解并掌握了一系列前端开发工具和框架的使用方法，为前端开发设计积累了不少经验。
+</textarea>
+</body>
+</html>
